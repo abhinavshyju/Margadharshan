@@ -1,0 +1,44 @@
+
+.jcc{
+    display: flex;
+    justify-content: center;
+}
+.pop{
+    padding: 60px;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.place-container{
+    margin-top:30px  ;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.place-card{
+    height: auto;
+    min-width: 300px;
+    width: 30%;
+    padding: 10px 10px 20px 10px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 1rem;
+}
+.place-card img{
+    border-radius: .5rem;
+    height: 200px;
+}
+.place-card h3{
+    font-weight: 900;
+}
+.button{
+    background-color: orangered;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+}

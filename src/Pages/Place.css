@@ -1,0 +1,109 @@
+.card-container{
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 1rem;
+}
+.place-data img{
+    width: 50%;
+    border-radius: .5rem;
+}
+.place-content{
+    padding: 30px;
+}
+.card-container h2{
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 3rem;
+}
+.img-container{
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+    overflow-y: scroll;
+    justify-content: center;
+}
+.img-container img{
+    width: 13rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+.place-images h3{
+    font-size: 2rem;
+    font-weight: 800;
+    margin:40px 0px 20px 10px;
+}
+
+.Review-sec{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.Review{
+    position: relative  ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding: 40px;
+    max-height: 300px;
+    /* overflow-y: scroll; */
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.reviewer-input{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px;
+    border-radius: 2rem ;
+}
+.reviewer-input img{
+    border-radius: 50%;
+    width: 60px;
+}
+
+.reviewer-input input{
+    width: 70%;
+    height: 40px;
+    min-width: 400px;
+    outline: none;
+    border: none;
+}
+.reviewer-input button{
+    padding: 5px 13px;
+    border-radius: 50%;
+    background-color: blue;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white    ;
+}
+.review-output{
+    width: 100%;
+    overflow-y: scroll;
+    
+}
+.review-output img{     
+    width: 60px;
+    border-radius: 50%;
+}
+.review-output li{
+    display: flex;
+    align-items: center ;
+    width: 100%;
+    height: 70px;
+    min-width: 400px;
+    margin-top: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px;
+    border-radius: 2rem ;
+    
+}
+.review-output ul{
+    display: flex;
+    flex-direction: column-reverse;
+}

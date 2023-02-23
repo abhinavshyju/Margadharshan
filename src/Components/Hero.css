@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@500;900&family=Russo+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+.d-flex{
+    display: flex;
+}
+.hero{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    
+}
+
+.nav-bar{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    padding: 30px 50px;
+    font-family: 'Russo One', sans-serif;
+}
+.log-con{
+    background-color: #ff7300;
+    height: 40px;
+    width: auto;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: #ffff;
+
+}
+.logo{
+    font-size:1.5rem; 
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar li{
+    margin-left: 30px;
+    list-style: none ;
+    font-size: 1.25 rem;
+}
+.hero-img{
+    margin-top: 50px;
+    flex: 5;
+    height: 100vh;
+    padding-top: 100px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-content{
+    margin-top: 50px;
+    flex: 5 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left :100px ;
+}
+.hero-content h1{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+}
+.hero p{
+    margin-top: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+.explore{
+    margin-left: 80%;
+}
