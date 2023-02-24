@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.Log{
+  position: absolute;
+  height: 100vh;
+ display: flex;
+ align-items: center;
+ left: 50%;
+ transform: translate(-50%);
+ background-color: transparent;
+ z-index: 100;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blur{
+  width: auto;
+  height: auto;
+  -webkit-filter: blur(8px);
 }
+.Log-container{
+  width: 600px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+.Log{
+  flex: 5;
+  padding: 10px;
+  margin-left: 50px;
+}
+.input-con{
+  margin-left: 10px;
+  padding-left: 20px;
+}
+.input-con input{
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+.input-con label{
+  font-weight: 800;
+  font-size: 20px;
+}
+.Log button{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 1px 10px ;
+  font-weight: 900;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+  margin-bottom: 20px;
+}
+.logimg{
+  flex: 3;
+}
+.Login{
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 30px;
+  padding-left: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+.Login h2{
+ font-size: 40px;
+ margin-bottom: 20px;
+ margin-left:50px;
+ font-weight: 800;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logimg{
+  position: relative;
+}
+.logimg img{
+  position: absolute;
+  width: 400px;
+ bottom: -130px;
+ left: -140px;
 }
