@@ -25,20 +25,35 @@
     padding: 10px 10px 20px 10px ;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     border-radius: 1rem;
+    overflow: hidden;
 }
 .place-card img{
     border-radius: .5rem;
     height: 200px;
+
+
+}
+.place-card :hover img{
+    transform: scale(1.05);
+    transition: transform .5s ease;
 }
 .place-card h3{
     font-weight: 900;
 }
 .button{
-    background-color: orangered;
+    background-color: #41C929;
     padding: 10px 20px;
     border-radius: 10px;
     margin-top: 30px;
     color: white;
     font-size: 20px;
     font-weight: 800;
+}
+.button a{
+   color: white;
+}
+.button:hover{
+    transform: scale(1.05);
+    transition: transform .5s ease;
+
 }

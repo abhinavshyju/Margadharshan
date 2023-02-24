@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { Navbar } from '../Components/Navbar'
 
 export const AllExPlace = () => {
+
+    const [District, setDistrict] = useState([]);
+
+    const fetchData = () => {
+      return fetch("https://script.google.com/macros/s/AKfycbx1ZrDNut7F7lqKxnJHOo1XWSDEHTzdCuBOQ3OyqTGTdf3rtbAROjzfLDpmddE8D9EX/exec")
+        .then((response) => response.json())
+        .then((Disdata) => setDistrict(Disdata));
+  
+    }
+
+  useEffect(() => {
+    fetchData();
+
+  }, []);
   return (
   <>
   <Navbar/>
@@ -9,36 +24,19 @@ export const AllExPlace = () => {
   <div className='pop'>
         <h1>Explore Place</h1>
         <div className='place-container'>
-            <div className='place-card'>
-                <img src='https://images.livemint.com/img/2023/02/07/1600x900/kerala-tourism_1675753250452_1675753262214_1675753262214.jpg' alt='image'/>
-                <h3>Place1</h3>
-                <p>discription </p>
-            </div>
-            <div className='place-card'>
-                <img src='https://images.livemint.com/img/2023/02/07/1600x900/kerala-tourism_1675753250452_1675753262214_1675753262214.jpg' alt='image'/>
-                <h3>Place1</h3>
-                <p>discription </p>
-            </div>
-            <div className='place-card'>
-                <img src='https://images.livemint.com/img/2023/02/07/1600x900/kerala-tourism_1675753250452_1675753262214_1675753262214.jpg' alt='image'/>
-                <h3>Place1</h3>
-                <p>discription </p>
-            </div>  
-            <div className='place-card'>
-                <img src='https://images.livemint.com/img/2023/02/07/1600x900/kerala-tourism_1675753250452_1675753262214_1675753262214.jpg' alt='image'/>
-                <h3>Place1</h3>
-                <p>discription </p>
-            </div>
-            <div className='place-card'>
-                <img src='https://images.livemint.com/img/2023/02/07/1600x900/kerala-tourism_1675753250452_1675753262214_1675753262214.jpg' alt='image'/>
-                <h3>Place1</h3>
-                <p>discription </p>
-            </div>  
-            <div className='place-card'>
-                <img src='https://images.livemint.com/img/2023/02/07/1600x900/kerala-tourism_1675753250452_1675753262214_1675753262214.jpg' alt='image'/>
-                <h3>Place1</h3>
-                <p>discription </p>
-            </div> 
+        {
+                // District.slice(0, n).map(D => (
+                District.map(D => (
+                    <div className='place-card'>
+                       <Link to={D.disslug}>
+                        <img src={D.coverimage} alt='image'/>
+                        <h3>{D.disname}</h3>
+                        </Link>
+                        <p>{D.sshortdiscription} </p>
+                    </div>
+                ))
+            }
+          
         </div>
     </div>
   </>

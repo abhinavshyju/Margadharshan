@@ -26,11 +26,11 @@ export const Hero = () => {
             <div className='hero-content'>
                 <h1>Explore</h1>
                 <h1>Beautiful</h1>
-                <h1>World!</h1>
+                <h1>kerala!</h1>
                 <p>No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. </p>
             </div>
             <div className='hero-img'>
-                <img src='https://img.freepik.com/premium-vector/tourist-couples-with-travel-bags-illustration_158784-885.jpg' alt='image'/>
+                <img src='http://www.keralaindiavacation.com/images/page-images/kerala-header.jpg' alt='image'/>
             </div>
         </div>
         <div className='pop-list'>
@@ -43,8 +43,16 @@ export const Hero = () => {
         <h3 className='explore'>EXPLORE KERALA</h3>
         
     </div>
-    <Popular/>
-    <Exploreplace/>
+    <div className='d-flex'>
+        <div className='update'>
+            <h2>Updates</h2>
+        </div>
+        <div className='contentside'>
+                <Popular/>
+                <Exploreplace/>
+        </div>
+    
+    </div>
   
     </>
     

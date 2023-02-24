@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   return (
     <div className='nav-bar'>
-           <a href='/'><span  className='logo'>MARGADHARSHAN</span></a> 
+           <Link to='/'><span  className='logo'>MARGADHARSHAN</span></Link> 
             <ul>
                 <li>Home</li>
                 <li>About</li>

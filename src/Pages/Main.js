@@ -15,7 +15,11 @@ export const Main = () => {
       <Routes>
         <Route path="/" element={<Hero/>}/>
         <Route path='/explore' element={<AllExPlace/>}/>
-        <Route path='/place' element={Place}
+        <Route path='/explore/:disslug' element={<ExPlace/>}/>
+        <Route path=':disslug' element={<ExPlace/>}/>
+        <Route path='/explore/:disslug/:slug' element={<Place/>}/>
+        <Route path='/:disslug/:slug' element={<Place/>}/>
+        <Route path=':slug' element={<Place/>}/>
       </Routes>
     </div>
     </BrowserRouter>
@@ -23,12 +27,3 @@ export const Main = () => {
   )
 }
 
-
-
-            {/* <Hero/> 
-            <Popular/>
-            <Exploreplace/>
-        <Navbar/>
-        <AllExPlace/>
-        <ExPlace/>
-        <Place/> */}

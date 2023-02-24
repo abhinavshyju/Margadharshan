@@ -27,13 +27,17 @@ img{
     font-family: 'Russo One', sans-serif;
 }
 .log-con{
-    background-color: #ff7300;
+    background-color:   #41C929;
     height: 40px;
     width: auto;
     padding: 10px 10px;
     border-radius: 10px;
     color: #ffff;
 
+}
+.log-con:hover{
+    transform: scale(1.05);
+    transition: transform .5s ease;
 }
 .logo{
     font-size:1.5rem; 
@@ -47,18 +51,22 @@ img{
     font-size: 1.25 rem;
 }
 .hero-img{
-    margin-top: 50px;
-    flex: 5;
+
+    flex: 6;
     height: 100vh;
     padding-top: 100px;
     padding-right: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+}
+.hero-img img{
+   width:100%;
+   margin-right: -30px
 }
 .hero-content{
     margin-top: 50px;
-    flex: 5 ;
+    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,4 +83,18 @@ img{
 }
 .explore{
     margin-left: 80%;
+}
+.update{
+    flex: 2;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+}
+.contentside{
+    flex: 6;
+}
+.contentside  .pop{
+    padding: 10px;
+}
+.update h2{
+    text-transform: uppercase;
+    text-align: center;
 }

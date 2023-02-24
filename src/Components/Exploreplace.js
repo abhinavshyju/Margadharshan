@@ -6,7 +6,7 @@ export const Exploreplace = () => {
     const [District, setDistrict] = useState([]);
 
     const fetchData = () => {
-      return fetch("https://script.google.com/macros/s/AKfycbxioHwX2fi1E6Nxyw4vfLF_ZkE3tnJacQVnVCCTtJDobr4a0X9cWbf6W46Am-L4Zk0T/exec")
+      return fetch("https://script.google.com/macros/s/AKfycbx1ZrDNut7F7lqKxnJHOo1XWSDEHTzdCuBOQ3OyqTGTdf3rtbAROjzfLDpmddE8D9EX/exec")
         .then((response) => response.json())
         .then((Disdata) => setDistrict(Disdata));
   
@@ -16,27 +16,28 @@ export const Exploreplace = () => {
     fetchData();
 
   }, []);
-  // const n = 3;
+  
+  const n = 6;
   return (
     <div className='pop'>
         <h1>Explore Place</h1>
         <div className='place-container'>
             {
-                // District.slice(0, n).map(D => (
-                District.map(D => (
+                District.slice(0, n).map(D => (
+                // District.map(D => (
                     <div className='place-card'>
-                        <Link to={'/place'}>
+                        <Link to={D.disslug}>
                         <img src={D.coverimage} alt='image'/>
                         <h3>{D.disname}</h3>
                         </Link>
-                        <p>{D.discription} </p>
+                        <p>{D.sshortdiscription} </p>
                     </div>
                 ))
             }
           
         </div>
         <div className='jcc'>
-            <div className='button'><a href='/explore' ><span>See More  </span></a></div>
+            <div className='button'><Link to='/explore' ><span>See More  </span></Link></div>
         </div>
     </div>
   )
