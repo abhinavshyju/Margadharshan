@@ -5,7 +5,7 @@ import Search from '../Search'
 export const Navbar = () => {
   return (
     <div className='nav-bar'>
-           <Link to='/'><span  className='logo'>MARGADHARSHAN</span></Link> 
+           <Link to='/hero'><span  className='logo'>MARGADHARSHAN</span></Link> 
            <Search/>
             <ul>
                 <li>Home</li>
