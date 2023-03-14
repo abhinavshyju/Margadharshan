@@ -8,10 +8,6 @@ function SearchBar(props) {
     setSearchQuery(event.target.value);
   };
 
-  const handleOptionChange = (event) => {
-    setSearchOption(event.target.value);
-  };
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
     props.onSearch(searchQuery, searchOption);

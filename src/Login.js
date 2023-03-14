@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Main } from "./Pages/Main";
+import { Hero } from "./Components/Hero";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -17,7 +17,7 @@ const Login = () => {
 
     console.log(loginResponse.data);
     if (loginResponse.data === "True") {
-      navigate("/hero");
+      navigate("/home");
     }
     else{
       setLoginError(loginResponse.data)
@@ -78,7 +78,7 @@ const Login = () => {
       </div>
 
       <div className="blur">
-        <Main />
+        <Hero/>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { Main } from "./Pages/Main";
 import axios from "axios";
+import { Hero } from "./Components/Hero";
 
 const SignUp = () => {
   const naviagte = useNavigate();
@@ -24,7 +24,7 @@ const SignUp = () => {
     console.log(response.data);
 
     if (response.data === "Success") {
-      naviagte("/hero");
+      naviagte("/home");
     }
     else{
       setSignupError(response.data)
@@ -93,7 +93,7 @@ const SignUp = () => {
         </div>
       </div>
       <div className="blur">
-        <Main />
+        <Hero />
       </div>
     </div>
   );

@@ -1,0 +1,37 @@
+.contact{
+    padding: 50px;
+}
+.contact h1{
+    font-size: 30px;
+}
+.contact h3{
+    font-size: 40px;
+}
+.contact h3, h4 {
+    margin-top: 20px;
+}
+.contact-add{
+    flex: 4;
+
+}
+.contact-social{
+    flex: 5;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.media-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    background-color: #41C929;
+    border-radius: 0px 20px 20px 20px;
+}
+.media-container:hover{
+    transform: scale(1.05);
+    transition: transform .5s ease;
+}

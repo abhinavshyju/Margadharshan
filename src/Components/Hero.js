@@ -1,6 +1,4 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { AllExPlace } from '../Pages/AllExPlace'
 import { Exploreplace } from './Exploreplace'
 import './Hero.css'
 import { Navbar } from './Navbar'

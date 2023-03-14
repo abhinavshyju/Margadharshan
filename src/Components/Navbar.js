@@ -5,15 +5,15 @@ import Search from '../Search'
 export const Navbar = () => {
   return (
     <div className='nav-bar'>
-           <Link to='/hero'><span  className='logo'>MARGADHARSHAN</span></Link> 
+           <Link to='/home'><span  className='logo'>MARGADHARSHAN</span></Link> 
            <Search/>
             <ul>
                 <li>Home</li>
-                <li>About</li>
+                <li><Link to="/about">About</Link> </li>
                 <li>Contact</li>
             </ul>
             <div className='log-con'>
-            <span className='login'>Signup | Login</span>
+           <Link to='/'><span>Logout</span> </Link> 
             </div>
         </div>
   )

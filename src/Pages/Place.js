@@ -76,28 +76,29 @@ export const Place= () => {
 
               <div className='map'><AddressMap/></div> 
               <div className='Review-sec'>
-                <h3>Review</h3> 
-                  
                   <div className='Review'>
-                  
+                  <p>Share yor thoughts</p>
                     <div className='reviewer-input'>
-                      <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' alt='notfount'/>
-                      <input value={inputValue} onChange={handleInputChange} />
-                      <button onClick={handleAddSection}>✔</button>
+                      <textarea value={inputValue} onChange={handleInputChange} placeholder="Add a review" />
+                      <button onClick={handleAddSection}>   </button>
                     
                     </div>
                     <div className='review-output'>
                     <ul>  
+                      <li><p>It was a wonder full experience</p></li>
+                         <li><p>Wow ! great</p></li>
                         {sections.map((section) => (
-                          <li> <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' alt='notfount'/> <p>{section}</p></li>
+                          <li><p>{section}</p></li>
+                         
                         ))}
+                         
                       </ul>
                     </div>
                   
                   </div>
                 </div>
               </div>
-               <h2>Pakages</h2>
+               <h2>Packages</h2>
               <div className='map d-flex jcc packs'>
                 <div className='pack'>
                           <img src='https://media-cdn.tripadvisor.com/media/photo-s/14/b8/c9/e7/elixir-hills.jpg' alt=''/>
