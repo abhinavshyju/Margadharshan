@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@500;900&family=Russo+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+.d-flex{
+    display: flex;
+}
+.hero{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    
+}
+
+.nav-bar{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    padding: 30px 50px;
+    font-family: 'Russo One', sans-serif;
+}
+.log-con{
+    background-color:   #41C929;
+    height: 40px;
+    width: auto;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: #ffff;
+
+}
+.log-con:hover{
+    transform: scale(1.05);
+    transition: transform .5s ease;
+}
+.logo{
+    font-size:1.5rem; 
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar li{
+    margin-left: 30px;
+    list-style: none ;
+    font-size: 1.25 rem;
+}
+.hero-img{
+
+    flex: 6;
+    height: 100vh;
+    padding-top: 100px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.hero-img img{
+   width:100%;
+   margin-right: -30px
+}
+.hero-content{
+    margin-top: 50px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left :100px ;
+}
+.hero-content h1{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+}
+.hero p{
+    margin-top: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+.explore{
+    margin-left: 80%;
+}
+.update{
+    flex: 2;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+}
+.contentside{
+    flex: 6;
+}
+.contentside  .pop{
+    padding: 10px;
+}
+.update h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+.Search-input{
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-size: 12px;
+    background-color:transparent;
+    font-size: 20px;
+}
+.Search-button{
+    outline: none;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    font-size: 30px;
+    background-color: transparent;
+
+}
+.Search-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    height: 50px;
+    border-radius: 20px;
+
+}
+.Search-con img{
+    width: 30px;
+}
+.Search-out{
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    width: 500px;
+    height: auto;
+    margin-top: 10px ;
+    padding: 10px;
+
+}
+.Search-out p{
+    font-size: 20px;
+    margin-top: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+.Search-out p:hover{
+  color: #41C929;
+}

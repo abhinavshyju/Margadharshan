@@ -1,0 +1,140 @@
+
+.Addupdate{
+    display: flex;
+    padding: 50px;
+    width: 100%;
+}
+.d-flex2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.Addupdate select{
+    height: 30px;
+    width: 300px;
+}
+.Addupdate input{
+    height: 30px;
+    width: 300px;
+    
+}
+.Addupdate h2{
+    font-size: 20px;
+    color: rgb(39, 39, 39);
+}
+.Addupcontainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.UpButton{
+    display: flex;
+    justify-content: end;
+}
+.UpButton button{
+    padding: 10px 30px;
+    background-color: #1E1E42;
+    color: white;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;    
+}
+.Admin{
+    display: flex;
+}
+.Side-bar{
+    flex: 1;
+    background-color: #1E1E42;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.Side-bar h1{
+    margin-bottom:50px ;
+    margin-top: 20px;
+    color: white;
+}
+.Side-bar h4{
+    color: whitesmoke;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+.side-menu{
+    margin-top: 100px;
+}
+.Left-container{
+    flex: 5;
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 70px;
+    color: black;
+}
+.top-header h1 {
+    font-weight: 800;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.top-header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+.Update-Container{
+    width: 70%;
+}
+
+.Package-Output{
+    width: 100%;
+    padding-top: 40px;
+}
+.AddButton-container{
+    display: flex;
+    justify-content: end;
+}
+.AddButton-container button{
+    padding: 10px 30px;
+    background-color: #1E1E42;
+    color: white;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    
+
+}
+.Package-table{
+    display: flex;
+    justify-content: center;
+    align-self:center;
+    width: 100%;
+    margin-top: 50px;
+}
+.Package-table table{
+    width: 100%;
+}
+.Package-table tr{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.Package-table th, td{
+
+  padding: 20px 10px 20px 30px;
+}
+.Package-table td{
+    color: rgb(31, 31, 31);
+    font-weight: 700;
+}
