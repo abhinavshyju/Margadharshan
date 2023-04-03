@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Exploreplace } from './Exploreplace'
 import './Hero.css'
 import { Navbar } from './Navbar'
 import { Popular } from './Popular'
+import Marquee from "react-fast-marquee";
 
 export const Hero = () => {
+    const [Data, setData] = useState([]);
+
+    const fetchDatas = () => {
+      return fetch("http://localhost:5000/data_update")
+        .then((response) => response.json())
+        .then((data) => setData(data));
+    
+    }
+    
+    useEffect   (() => {
+    fetchDatas();
+  
+    
+    }, []);
   return (
     <>  
     <div className='hero'>
@@ -44,6 +59,20 @@ export const Hero = () => {
     <div className='d-flex'>
         <div className='update'>
             <h2>Updates</h2>
+           
+            {/* <Marquee>
+            {Data.map(e=> (
+                <h4>{e.update}</h4>
+            ))}
+            </Marquee> */}
+            
+            {Data.map(e=> (
+                <marquee >
+                    <h4>{e.update}</h4>
+                </marquee>
+            ))}
+            
+            <div className='updateoverlay'></div>
         </div>
         <div className='contentside'>
                 <Popular/>

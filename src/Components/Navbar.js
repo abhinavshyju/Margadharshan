@@ -8,7 +8,7 @@ export const Navbar = () => {
            <Link to='/home'><span  className='logo'>MARGADHARSHAN</span></Link> 
            <Search/>
             <ul>
-                <li>Home</li>
+                <li> <Link to="/home" >Home</Link></li>
                 <li><Link to="/about">About</Link> </li>
                 <li>Contact</li>
             </ul>

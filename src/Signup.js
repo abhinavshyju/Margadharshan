@@ -21,8 +21,6 @@ const SignUp = () => {
       },
     });
 
-    console.log(response.data);
-
     if (response.data === "Success") {
       naviagte("/home");
     }

@@ -23,7 +23,7 @@ function SearchBar(props) {
         onChange={handleInputChange}
       />
       <button type="submit" className='Search-button'> 
-      <img src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png'alt='search'/>
+      <img src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png'alt=''/>
       </button>
       </div>
     </form>

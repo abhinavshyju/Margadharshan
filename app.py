@@ -59,18 +59,19 @@ def signin_view():
         username = request.json["body"]["username"]
         password = request.json["body"]["password"]
 
-        admin = Users.query.filter_by(username="admin").first()
-        found = Users.query.filter_by(username=username).first()
+        
+        admin = Users.query.filter_by(username= username).first()
         if admin:
-            if admin.password == "admin@123":
-                return "Admin"
-            else :
-                return "Ooppss!! incorrect password"
-        elif found:
-            if found.password == password:
-                return "True"
-            else :
-                return "Ooppss!! incorrect password"
+            if admin.username == "admin":
+                if admin.password == "admin@123":
+                    return "Admin"
+            
+            else:
+                if admin.username == username:
+                    if admin.password == password:
+                        return "True"
+                    else :
+                        return "Ooppss!! incorrect password"
         else:
             return "User not found"
 
@@ -88,6 +89,19 @@ def update_view():
             return ""
         except:
             return " "
+
+@app.route("/data_update", methods=['GET'])
+def data_update():
+    get_update = Data.query.all()
+    update_list = []
+    for update in get_update:
+        update_dict = {
+            'id': update.id,
+            'update': update.data,
+        }
+        update_list.append(update_dict)
+    return jsonify(update_list)
+
 
 
 
@@ -132,6 +146,7 @@ def data_package():
         }
         package_list.append(package_dict)
     return jsonify(package_list)
+
 
 
 if __name__ == "__main__":

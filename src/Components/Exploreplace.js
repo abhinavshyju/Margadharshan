@@ -26,7 +26,7 @@ export const Exploreplace = () => {
                 District.slice(0, n).map(D => (
                 // District.map(D => (
                     <div className='place-card'>
-                        <Link to={D.disslug}>
+                        <Link to={`/explore/${D.disslug}`}>
                         <img src={D.coverimage} alt='image'/>
                         <h3>{D.disname}</h3>
                         </Link>

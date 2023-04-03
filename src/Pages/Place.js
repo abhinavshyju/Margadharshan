@@ -4,6 +4,7 @@ import { Navbar } from '../Components/Navbar'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AddressMap } from '../Components/mapAdress';
+import submit from './submit.png'
 
 export const Place= () => {
 
@@ -22,12 +23,34 @@ export const Place= () => {
   
   }, []);
 
+  const [Data, setData] = useState([]);
+
+  const fetchDatastwo = () => {
+    return fetch("http://localhost:5000/data_view")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  
+  }
+  
+  useEffect(() => {
+  fetchDatastwo();
+
+  
+  }, []);
+
   const params = useParams();
   const {slug} = params;
   const Places = []
   Place.map((i)=> {
     if (i.slug === slug){
       Places.push(i)
+      
+  }
+  })  
+  const Package = []
+  Data.map((i)=> {
+    if (i.place === slug){
+      Package.push(i)
       
   }
   })  
@@ -63,24 +86,15 @@ export const Place= () => {
                   
               </div>
 
-              {/* <div className='place-images'>
-                <h3>Photos</h3  >
-                <div className='img-container'>
-                  {Places .map(u =>(
-                     <img src={u} alt='name'/>
-                  ))}
-                   
-                </div>
-              </div> */}
               <div className='d-flex r-m'>
 
               <div className='map'><AddressMap/></div> 
               <div className='Review-sec'>
                   <div className='Review'>
-                  <p>Share yor thoughts</p>
+                  <p className='shareyour'>Share yor thoughts</p>
                     <div className='reviewer-input'>
                       <textarea value={inputValue} onChange={handleInputChange} placeholder="Add a review" />
-                      <button onClick={handleAddSection}>   </button>
+                      <button onClick={handleAddSection}> <img src={submit}/>  </button>
                     
                     </div>
                     <div className='review-output'>
@@ -100,24 +114,17 @@ export const Place= () => {
               </div>
                <h2>Packages</h2>
               <div className='map d-flex jcc packs'>
-                <div className='pack'>
-                          <img src='https://media-cdn.tripadvisor.com/media/photo-s/14/b8/c9/e7/elixir-hills.jpg' alt=''/>
-                          <h3>Hotel name</h3> 
-                </div>
-                <div className='pack'>
-                          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSus4ABbn8n9WHWS80xKyMbTH-qA_iDrFI68w&usqp=CAU' alt=''/>
-                          <h3>Hotel name</h3> 
-                </div>
-                <div className='pack'>
-                          <img src='https://www.tourmyindia.com/hotelsinindia/images/hill-view-2.jpg' alt=''/>
-                          <h3>Hotel name</h3> 
-                </div>
-                <div className='pack'>
-                          <img src='https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_230,q_auto,w_305/v1/filestore/haoxguwzxijqpkx0nusei734r82h_3a32e5de-e5a0-439e-a842-459f1854ec7e.jpg' alt=''/>
-                          <h3>Hotel name</h3> 
-                </div>
-                
-              
+                {Package.map(e=> (
+                    <div className='pack'>
+                      <img src={e.image} alt=''/>
+                      <div className='d-flex jcs'>
+                      <h3>{e.name}</h3> 
+                      <h4 className='m-0'>{e.price}</h4>
+                      </div>
+                      <h4>{e.discription}</h4>
+                    </div>
+                ))}
+
               </div>
               
             </div>

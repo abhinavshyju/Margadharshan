@@ -16,13 +16,19 @@ const Login = () => {
     });
 
     console.log(loginResponse.data);
-    if (loginResponse.data === "True") {
-      navigate("/home");
+    if (loginResponse.data === "Admin") {
+      navigate("/admin/package");
+
+    }
+    else if(loginResponse.data === "True") {
+        navigate("/home");
+
     }
     else{
       setLoginError(loginResponse.data)
     }
   };
+ 
 
   return (
     <div className="container">
