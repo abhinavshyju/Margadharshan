@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const AdminUpIn = () => {
     const [data, setUpdate] = useState("");
+    const [id, setId] = useState("")
     const handleSignUp = async (event) => {
         event.preventDefault();
         const response = await axios.post("http://localhost:5000/update", {
@@ -11,6 +12,9 @@ const AdminUpIn = () => {
             data: data,
           },
         });
+        if (response.data == "Success"){
+            window.location.reload(false);
+        }
       };
     const [Data, setData] = useState([]);
 
@@ -26,6 +30,18 @@ const AdminUpIn = () => {
   
     
     }, []);
+    const handleDelete = async (event) => {
+        event.preventDefault();
+        const response = await axios.post("http://localhost:5000/update_delete", {
+          body: {
+            id:id,
+          },
+        });
+        if (response.data === "delete") {
+            window.location.reload(false);
+          }
+    
+    };
     console.log(Data)
   return (
     <div>
@@ -44,7 +60,7 @@ const AdminUpIn = () => {
             </div>
             <div className='Left-container'>
                 <div className='top-header'>
-                <Link to="/home"> <h1>Margadhardhan</h1> </Link>
+                <Link to="/home"> <h1>Margadharshan</h1> </Link>
                 <img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'/>
                 </div>
                 <div className='Update-Container'>
@@ -75,13 +91,17 @@ const AdminUpIn = () => {
                                                 <th>
                                                 Updates
                                                 </th>
+                                                <th>Delete</th>
                                         </tr>
                                             {Data.map(e => (
                                         <tr>
                                                     <td>{e.id}</td>
                                                     <td>{e.update}</td>
+                                                    <td>
+                                                    <form onSubmit={handleDelete}><button type="submit" value={e.id} onClick={(e)=> setId(e.target.value)}>Delete</button></form>
+                                                    </td> 
                                         </tr>
-                                                            ))}
+                                                        ))}
                                     </table>
                                 </div>
                             </div>

@@ -20,7 +20,7 @@ const AdminOut = () => {
             </div>
             <div className='Left-container'>
                 <div className='top-header'>
-                <Link to="/home"> <h1>Margadhardhan</h1> </Link>
+                <Link to="/home"> <h1>Margadharshan</h1> </Link>
                 <img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'/>
                 </div>
                 <div className='Update-Container'>

@@ -87,6 +87,7 @@ const SignUp = () => {
                 <button type="submit">Sign Up</button>
               </center>
             </form>
+            <p>Make contributor access account ? <a href='/agency_signup'>Sign Up</a></p>
           </div>
         </div>
       </div>

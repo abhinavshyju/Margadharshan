@@ -20,6 +20,9 @@ const Login = () => {
       navigate("/admin/package");
 
     }
+    else if (loginResponse.data === "Agency"){
+      navigate("/agency_package")
+    }
     else if(loginResponse.data === "True") {
         navigate("/home");
 

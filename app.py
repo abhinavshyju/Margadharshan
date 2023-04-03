@@ -15,6 +15,12 @@ class Users(db.Model):
     password = db.Column(db.String(300), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
 
+class AgencyUsers(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), unique=True, nullable=False)
+    password = db.Column(db.String(300), nullable=False)
+    email = db.Column(db.String(100), unique=True, nullable=False)
+
 
 @dataclass
 class Data(db.Model):
@@ -52,6 +58,23 @@ def signup_view():
         except:
             return "User alredy exist"
 
+@app.route("/travel_agency_signup", methods=["GET", "POST"])
+def travel_signup_view():
+    if request.method == "POST":
+        print(request.json)
+        username = request.json["body"]["username"]
+        password = request.json["body"]["password"]
+        email = request.json["body"]["email"]
+
+        try:
+            user = AgencyUsers(username=username, password=password, email=email)
+            db.session.add(user)
+            db.session.commit()
+            return "Success"
+        except:
+            return "User alredy exist"
+
+
 
 @app.route("/login", methods=["GET", "POST"])
 def signin_view():
@@ -59,9 +82,15 @@ def signin_view():
         username = request.json["body"]["username"]
         password = request.json["body"]["password"]
 
-        
+        travel = AgencyUsers.query.filter_by(username= username).first()
         admin = Users.query.filter_by(username= username).first()
-        if admin:
+
+        if travel:
+            if travel.username == username:
+                if travel.password == password:
+                    return "Agency"
+                    
+        elif admin:
             if admin.username == "admin":
                 if admin.password == "admin@123":
                     return "Admin"
@@ -72,6 +101,11 @@ def signin_view():
                         return "True"
                     else :
                         return "Ooppss!! incorrect password"
+        elif travel:
+            if travel.username == username:
+                if travel.password == password:
+                    return "Agency"
+
         else:
             return "User not found"
 
@@ -86,9 +120,9 @@ def update_view():
             update = Data(data=data)
             db.session.add(update)
             db.session.commit()
-            return ""
+            return "Success"
         except:
-            return " "
+            return "Fail"
 
 @app.route("/data_update", methods=['GET'])
 def data_update():
@@ -145,7 +179,36 @@ def data_package():
             'image': package.image
         }
         package_list.append(package_dict)
+    
     return jsonify(package_list)
+   
+@app.route("/package_delete", methods=["POST"])
+def delete():
+    if request.method == "POST":
+        id= request.json["body"]["id"]
+        print(request.json)
+    try:
+        Package = Packages.query.get(id)
+        db.session.delete(Package)
+        db.session.commit()
+        return "delete"
+
+    except:
+        return "failed"
+
+@app.route("/update_delete", methods=["POST"])
+def update_delete():
+    if request.method == "POST":
+        id= request.json["body"]["id"]
+        print(request.json)
+    try:
+        update = Data.query.get(id)
+        db.session.delete(update)
+        db.session.commit()
+        return "delete"
+
+    except:
+        return "failed"
 
 
 

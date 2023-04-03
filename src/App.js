@@ -12,6 +12,9 @@ import UpdateView from "./Components/UpdateView";
 import AdminOut from "./Pages/AdminOut";
 import AdminIn from "./Pages/AdminIn";
 import AdminUpIn from "./Pages/AdminUpIn";
+import TravelSignup from "./Pages/TravelSignup";
+import Agency_input from "./Pages/Agency_Input";
+import Agency_Output from "./Pages/Agency_Output";
 
 function App() {
   return (
@@ -34,6 +37,9 @@ function App() {
             <Route path="/admin/package" element={<AdminOut/>}/>
             <Route path="/admin/package-add" element={<AdminIn/>}/>
             <Route path="/admin/update" element={<AdminUpIn/>}/>
+            <Route path="/agency_signup" element={<TravelSignup/>}/>
+            <Route path="/agency_package/input" element={<Agency_input/>}/>
+            <Route path="/agency_package" element={<Agency_Output/>}/>
 
           </Routes>
         </div>

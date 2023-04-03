@@ -71,7 +71,9 @@ const About = () => {
               </div>
           </div>
         </div>
+       
       <Contact/>
+      
     </div>
 
   
